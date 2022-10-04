@@ -52,8 +52,8 @@ function printPdf(){
 	const element = document.getElementById("content");
 	html2pdf(element, {
 		filename: 'Julien_Bellion-cv.pdf',
-		margin: 1,
-		jsPDF: { unit: 'cm', format: 'A4', orientation: 'portrait', putOnlyUsedFonts: true }
+		margin:  0.5,
+		jsPDF: { unit: 'cm', format: 'A4', orientation: 'portrait' }
 	});
 	
 	setTimeout(() => {  
@@ -61,7 +61,7 @@ function printPdf(){
 		for (const elt of elts){
 			elt.style.display = "";
 		}
-	}, 1000);
+	}, 5000);
 	
 	
 }
