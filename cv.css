@@ -1,0 +1,318 @@
+/* GENERAL */
+*{
+  margin: 0;
+}
+
+body{
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+a{
+  text-decoration: none;
+  color: #4472C4;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+p{
+  margin: 0 0 1rem;
+}
+
+h1{
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+}
+
+h2{
+  margin: 0 0 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.text-blue{
+  color: #4472C4;
+}
+
+.text-darkblue{
+  color: #002060;
+}
+
+.text-uppercase{
+  text-transform: uppercase; 
+}
+
+.icon{
+  margin-right: .5rem;
+}
+
+.cv-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "left-column right-column right-column";
+  width: 1200px;
+  margin: 100px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.section{
+  margin-bottom: 1.5rem;
+}
+
+/* LEFT COLUMN */
+.left-column{
+  grid-area: left-column;
+  padding: 50px;
+  background-color: #4472C4;
+  color: white;
+}
+
+.portait{
+  border-radius: 50%;
+  max-width: 150px;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.filter :hover{
+	cursor: default;
+}
+.selectedFilter{
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  border: 1px solid white;
+}
+.selectedFilter :hover{
+	cursor: not-allowed;
+}
+
+.skills{
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin: 0 0 1rem;
+}
+
+/* RIGHT COLUMN */
+.right-column{
+  grid-area: right-column;
+  grid-template-rows: 250px 1fr;
+  grid-template-areas: 
+    "header"
+    "content";
+}
+
+/* HEADER */
+.header{
+  grid-area: header;
+  padding: 50px;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infos{
+  columns: 2;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* CONTENT */
+.content{
+  grid-area: content;
+  padding: 10px 0px 10px 20px;
+}
+
+.experience-list{
+  list-style-type: circle;
+}
+
+/* TIMELINE */
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 10px 10px 30px;
+  position: relative;
+  background-color: white;
+  width: 100%;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+	left: 0;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -10px;
+}
+
+/* The actual content */
+.time-content {
+  padding: 10px 10px;
+  background-color: #4472C4;
+  position: relative;
+  border-radius: 6px;
+}
+.time-content a,h3 {
+  color: white;
+}
+.project h4{
+  /*color: white;*/
+  display: inline;
+}
+.project .date{
+  float: right;
+}
+.project {
+  color: black;
+  background-color: transparent;
+  border: 1px solid #4472C4;
+  padding: 0px 10px 10px 10px;
+}
+.time-content-section {
+  padding: 10px 20px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+.technologies{
+	break-inside: avoid;
+	text-align: right;
+	margin-top: 5px;
+}
+.technologies span{
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+.print{
+	display: none;
+}
+.print .left{
+	width:40%;
+	float:left;
+}
+.print .right{
+	width:40%;
+	float:right;
+}
+.print .section{
+	display:block;
+	width: 100%;
+	clear: both;
+}
+  
+@media screen {
+
+	*{
+	  box-sizing: border-box;
+	}
+
+	.right-column{
+	  display: grid;
+	}
+
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 20px;
+	  width: 0;
+	  z-index: 1;
+	  left: 20px;
+	  border: medium solid #4472C4;
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent #4472C4 transparent transparent;
+	}
+	
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 4px;
+	  background-color: #4472C4;
+	  top: 0;
+	  bottom: 0;
+	  left: 0%;
+	  margin-left: -3px;
+	}
+
+	/* The circles on the timeline */
+	.container::after {
+	  content: '';
+	  position: absolute;
+	  width: 10px;
+	  height: 10px;
+	  right: -5px;
+	  background-color: #4472C4;
+	  border: 4px solid #FF9F55;
+	  top: 20px;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
+	
+} 
+  
+@media print {
+	header, footer {
+		display: none;
+	}
+	
+	@page {
+		margin-top: 2cm;
+		margin-bottom: 2cm;
+		margin-right: 1cm;
+		margin-left: 1cm;
+	}
+	div{
+		display: block;
+	}
+	a:after {
+		content: " (" attr(href) ")";
+		font-size: 80%;
+	}
+	.container{
+		padding: 0;
+	}
+ .screen{
+	display: none;
+  }
+  .print{
+	display: block;
+  }
+  .cv-container{
+	display: contents;
+  }
+  div.xp{
+    break-inside: avoid;
+  }
+  .pba{page-break-after: always;}
+  .pbb{page-break-before: always;}
+}
