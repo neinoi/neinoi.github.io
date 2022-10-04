@@ -19,7 +19,7 @@ a:hover{
   text-decoration: underline;
 }
 
-.section a{
+.left-column .section a{
 	color: white;
 	font-weight: bold;
 }
