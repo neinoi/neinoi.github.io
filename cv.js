@@ -41,3 +41,27 @@ function filter(element, skill){
 		}
 	} 
 }
+
+function printPdf(){
+	
+	elts = document.getElementsByClassName('pdf')
+	for (const elt of elts){
+		elt.style.display = "block";
+	}
+	
+	const element = document.getElementById("content");
+	html2pdf(element, {
+		filename: 'Julien_Bellion-cv.pdf',
+		margin: 1,
+		jsPDF: { unit: 'cm', format: 'A4', orientation: 'portrait', putOnlyUsedFonts: true }
+	});
+	
+	setTimeout(() => {  
+		elts = document.getElementsByClassName('pdf')
+		for (const elt of elts){
+			elt.style.display = "";
+		}
+	}, 1000);
+	
+	
+}

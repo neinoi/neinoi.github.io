@@ -315,9 +315,11 @@ h2{
   .cv-container{
 	display: contents;
   }
+}
+
   div.xp{
     break-inside: avoid;
   }
   .pba{page-break-after: always;}
   .pbb{page-break-before: always;}
-}
+
