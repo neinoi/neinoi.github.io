@@ -40,6 +40,15 @@ h2{
   text-transform: uppercase;
 }
 
+.section h5{
+	font-weight: normal;
+	position: relative;
+	left: -2rem;
+	top: -10em;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+
 .text-blue{
   color: #4472C4;
 }
@@ -86,15 +95,20 @@ h2{
 }
 
 .filter :hover{
-	cursor: default;
+	cursor: pointer;
+}
+.filter i.iremove {
+	display: none;
 }
 .selectedFilter{
   margin-top: .5rem;
   margin-bottom: .5rem;
-  border: 1px solid white;
 }
-.selectedFilter :hover{
-	cursor: not-allowed;
+.selectedFilter i.iadd {
+	display: none;
+}
+.selectedFilter i.iremove  {
+	display: inline-block;
 }
 
 .skills{
