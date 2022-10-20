@@ -234,11 +234,11 @@ h2{
 	display: none;
 }
 .print .left{
-	width:40%;
+	width:50%;
 	float:left;
 }
 .print .right{
-	width:40%;
+	width:50%;
 	float:right;
 }
 .print .section{
